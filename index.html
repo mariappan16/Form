@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+
+</head>
+ <body>
+  <h3>Task 1 - Form creation</h3>
+  <div class="noContextmenu" id="rclick">
+    <div class= "container">
+     <form>    
+       <div class="left">
+           <label for="name">Enter your name:</label>
+       </div>
+
+       <div class="right">
+           <input type="text" id="name" oninput="inputfunction();" required><br>
+       </div>
+
+       <div class="left">
+            <label for="mail">Email address:</label>
+       </div>
+
+       <div class="right">
+            <input type="email" id="mail" required><br>
+       </div>
+
+       <div class="left">
+            <label for="gender">Gender:</label>
+       </div>
+
+       <div class="right">
+           <div class="tooltipmale" value="1" onmouseover="toolIn('toolmale')" onmouseout="toolOut('toolmale')">
+               <input type="radio" id="male" name="gender" value="Male" style="margin-left: 0%;" onclick="inputradio(this.value)" )>
+               <label for="male">Male</label><span class="tool__tip--text" id="toolmale" >Click here to select male</span>
+           </div>
+
+           <div class="tooltipfemale" value="female" onmouseover="toolIn('toolfemale')" onmouseout="toolOut('toolfemale')" >
+               <input type="radio" id="female" name="gender" value="Female" onclick="inputradio(this.value)" >
+               <label for="female">Female</label><span class="tool__tip--text" id ="toolfemale" >Click here to select female</span>
+           </div>
+
+           <div class="tooltipothers" value="others" onmouseover="toolIn('toolothers')" onmouseout="toolOut('toolothers')">
+               <input type="radio" id="others" name="gender" value="Others" onclick="inputradio(this.value) ">
+               <label for="others">Others</label><span class="tool__tip--text" id="toolothers" >Click here to select others</span><br>
+           </div>
+       </div>
+
+
+       <div class="left">
+            <label for="tech">Technologies:</label>
+       </div>
+
+       <div class="right">
+            <input type="checkbox" id="html" name="tech" value="HTML" style="margin-left: 0%;" > 
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="tech" value="CSS" > 
+            <label for="css">CSS</label>
+            <input type="checkbox" id="javascrpit" name="tech" value="JavaScript" >
+            <label for="javascrpit">Javascrpit</label> <br>
+       </div>
+
+       <div class="left">
+            <label for="experience">Enter your experience in yeaers:</label>
+       </div>
+
+       <div class="right">
+            <input type="number" id="experience" oninput="inputexp(this.value)" onok="hiddenexp()">
+            <p class="Level" id="L"> </p>
+       <input type="button" id="button" value="Submit" onclick="buttonfunction()">
+
+       <menu id="ctxMenu">
+            <menu title=" Save"></menu>
+            <menu title=" Save As"></menu>
+            <menu title=" Open"></menu>
+            <menu title=" Print"></menu>
+
+      </menu>
+     </form>
+  </div>
+ </body>
+</html>
